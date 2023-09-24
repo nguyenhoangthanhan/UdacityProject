@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_asteroid_item">8dp</dimen>
+    <dimen name="layout_margin_small_8dp">8dp</dimen>
+    <dimen name="layout_margin_normal_16dp">16dp</dimen>
+</resources>

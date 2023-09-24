@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "168617523489",
+    "project_id": "udacitypj5",
+    "storage_bucket": "udacitypj5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168617523489:android:99f66645900762533ae660",
+        "android_client_info": {
+          "package_name": "com.example.android.politicalpreparedness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168617523489-9rvdimm8iqahakr0ra28cbn4st22ols5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.politicalpreparedness",
+            "certificate_hash": "9dc4c1aa962f2d7f3c99781308c9703909fe8833"
+          }
+        },
+        {
+          "client_id": "168617523489-lpliqbtucvcn35amaerincf3d8obhudl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd-DJS0QGj3FlWLdUTumdq5scAC0egap4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168617523489-lpliqbtucvcn35amaerincf3d8obhudl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

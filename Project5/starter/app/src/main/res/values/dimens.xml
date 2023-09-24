@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_padding">8dp</dimen>
+    <dimen name="normal_padding">16dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_small_normal">8dp</dimen>
+    <dimen name="margin_normal">12dp</dimen>
+    <dimen name="text_size_normal">18sp</dimen>
+    <dimen name="text_size_normal_2">20sp</dimen>
+    <dimen name="text_size_small1">16sp</dimen>
+    <dimen name="text_size_small">15sp</dimen>
+    <dimen name="text_size_small_small">13sp</dimen>
+    <dimen name="margin_election_time">40dp</dimen>
+    <!-- TODO: Add necessary dimension values -->s
+
+</resources>

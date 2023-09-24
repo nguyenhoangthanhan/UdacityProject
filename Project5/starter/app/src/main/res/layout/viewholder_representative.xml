@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="representative"
+            type="com.example.android.politicalpreparedness.representative.model.Representative"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_margin="@dimen/margin_small_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/representative_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            profileImage="@{representative.official.photoUrl}"
+            android:contentDescription="@string/representative_avatar_photo" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/gray444"
+            app:layout_constraintStart_toEndOf="@id/representative_photo"
+            app:layout_constraintBottom_toTopOf="@id/tv_representative_name"
+            android:text="@{representative.office.name}" />
+
+        <TextView
+            android:id="@+id/tv_representative_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/gray666"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toEndOf="@id/representative_photo"
+            app:layout_constraintBottom_toTopOf="@id/tv_party_name"
+            android:text="@{representative.official.name}" />
+
+        <TextView
+            android:id="@+id/tv_party_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textSize="@dimen/text_size_small_small"
+            app:layout_constraintTop_toBottomOf="@id/tv_representative_name"
+            app:layout_constraintStart_toEndOf="@id/representative_photo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@{representative.official.party}" />
+
+        <ImageView
+            android:id="@+id/www_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_constraintEnd_toStartOf="@id/facebook_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/ic_www"
+            android:contentDescription="@string/www_icon" />
+
+        <ImageView
+            android:id="@+id/facebook_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_constraintEnd_toStartOf="@id/twitter_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/ic_facebook"
+            android:contentDescription="@string/facebook_icon" />
+
+        <ImageView
+            android:id="@+id/twitter_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/ic_twitter"
+            android:contentDescription="@string/twitter_icon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

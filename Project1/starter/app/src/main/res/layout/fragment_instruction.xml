@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This layout use LinearLayout with the vertical orientation to arrange 2 TextView and Button in a vertical way
+     , set gravity="center" to all of views in this layout visible in center of screen
+ -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_20dp"
+        android:background="@color/gray_eee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/green_success"
+            android:textSize="@dimen/text_size_big_2"
+            android:textStyle="bold"
+            android:text="@string/instruction"/>
+
+
+        <TextView
+            android:id="@+id/tv_welcome_description"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/sky_blue"
+            android:textSize="@dimen/text_size_normal_2"
+            android:textStyle="bold"
+            android:text="@string/click_here_to_open_shoe_list_screen"/>
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:background="@drawable/new_button"
+            android:padding="@dimen/_12dp"
+            android:text="@string/open_shoe_list"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</layout>

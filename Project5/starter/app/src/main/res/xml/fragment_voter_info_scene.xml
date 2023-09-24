@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/tools">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/election_name"
+            android:alpha="0"
+            android:visibility="invisible" />
+        <Constraint android:id="@+id/election_date"
+            android:alpha="0"
+            android:visibility="invisible" />
+        <Constraint android:id="@+id/state_header"
+            android:alpha="0"
+            android:visibility="invisible" />
+        <Constraint android:id="@+id/state_locations"
+            android:alpha="0"
+            android:visibility="invisible" />
+        <Constraint android:id="@+id/state_ballot"
+            android:alpha="0"
+            android:visibility="invisible" />
+        <Constraint android:id="@+id/state_correspondence_header"
+            android:alpha="0"
+            android:visibility="invisible" />
+        <Constraint android:id="@+id/address"
+            android:alpha="0"
+            android:visibility="invisible" />
+        <Constraint android:id="@+id/voter_action_button"
+            android:alpha="0"
+            android:visibility="invisible" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/election_name"
+            android:alpha="1"
+            android:visibility="visible" />
+        <Constraint android:id="@+id/election_date"
+            android:alpha="1"
+            android:visibility="visible" />
+        <Constraint android:id="@+id/state_header"
+            android:alpha="1"
+            android:visibility="visible" />
+        <Constraint android:id="@+id/state_locations"
+            android:alpha="1"
+            android:visibility="visible" />
+        <Constraint android:id="@+id/state_ballot"
+            android:alpha="1"
+            android:visibility="visible" />
+        <Constraint android:id="@+id/state_correspondence_header"
+            android:alpha="1"
+            android:visibility="visible" />
+        <Constraint android:id="@+id/address"
+            android:alpha="1"
+            android:visibility="visible" />
+        <Constraint android:id="@+id/voter_action_button"
+            android:alpha="1"
+            android:visibility="visible" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        motion:duration="1000" />
+</MotionScene>

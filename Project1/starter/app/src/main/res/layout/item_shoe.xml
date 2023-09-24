@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This layout use:
+-The CardView contain The ConstraintLayout
+-The ConstraintLayout in CardView to contain sub-views:
++ 1 imageview demo, constraint top, start, bottom of this view to the top, start, bottom of ConstraintLayout;
+; constraint end to end of guideline1
++ 1 guideline1 with orientation vertical and layout_constraintGuide_percent="0.33", this help image demo
+can divide width = 1/3 screen
++ 1 TextView tv_title_name and 1 TextView name grouped to a chain
++ 1 TextView tv_title_size and 1 TextView size grouped to a chain
++ 1 TextView tv_title_company and 1 TextView company grouped to a chain
++ 1 TextView tv_title_description and 1 TextView description grouped to a chain
++ TextViews tv_title_name, tv_title_size, tv_title_company
+, tv_title_description grouped to a chain
++ TextViews name, size, company, description grouped to a chain
+ -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe"/>
+
+
+        <variable
+            name="shoeSizeString"
+            type="String" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="@dimen/margin_8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/margin_16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/margin_8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideline1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@drawable/shoe_demo_1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.33" />
+
+            <TextView
+                android:id="@+id/tv_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8dp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintEnd_toStartOf="@id/name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tv_title_size"
+                android:text="@string/name"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/margin_8dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_title_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/size"
+                android:text="@={shoe.name}" />
+
+            <TextView
+                android:id="@+id/tv_title_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8dp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintEnd_toStartOf="@id/size"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_name"
+                app:layout_constraintBottom_toTopOf="@id/tv_title_company"
+                android:text="@string/size" />
+
+            <TextView
+                android:id="@+id/size"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/margin_8dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintStart_toEndOf="@id/tv_title_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/company"
+                android:text="@={shoeSizeString}" />
+
+            <TextView
+                android:id="@+id/tv_title_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8dp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintEnd_toStartOf="@id/company"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_size"
+                app:layout_constraintBottom_toTopOf="@id/tv_title_description"
+                android:text="@string/company" />
+
+            <TextView
+                android:id="@+id/company"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/margin_8dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/size"
+                app:layout_constraintStart_toEndOf="@id/tv_title_company"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/description"
+                android:text="@={shoe.company}" />
+
+            <TextView
+                android:id="@+id/tv_title_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8dp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintEnd_toStartOf="@id/description"
+                app:layout_constraintTop_toBottomOf="@id/company"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/description" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/margin_8dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_company"
+                app:layout_constraintStart_toEndOf="@id/tv_title_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@={shoe.description}" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

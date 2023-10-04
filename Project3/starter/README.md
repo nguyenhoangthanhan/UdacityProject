@@ -21,23 +21,3 @@ Project rubric is [here! ](https://review.udacity.com/#!/rubrics/2852/view)
 8. Create the details screen and display the name of the repository and status of the download
 9. Use declarative XML with motionLayout to coordinate animations across the views on the detail screen
 10. Add a button to the detail screen to return back to the main screen.
-
-### Dependencies
-
-    def lifecycle_version = "2.2.0"
-    
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-
-    // ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
-    // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
-
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-

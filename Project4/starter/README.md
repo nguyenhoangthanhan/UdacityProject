@@ -1,6 +1,6 @@
 # Android NanoDegree Location Reminders
 
-![](screenshots/completed_android_kotlin_developer_nanodegree_projects_04.gif)
+![completed_android_kotlin_developer_nanodegree_projects_04](https://github.com/nguyenhoangthanhan/UdacityProject/assets/38137175/a367285a-f22d-4d39-b378-94677333a11a)
 
 This is based on the starter code from [here](https://github.com/udacity/nd940-android-kotlin-c4-starter).
 

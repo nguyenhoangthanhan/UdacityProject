@@ -10,7 +10,7 @@ Project 1:
 https://youtu.be/ngcbkmoILsI
 
 Project 2:
-https://youtube.com/shorts/W4n3r7stoY0
+https://www.youtube.com/watch?v=W4n3r7stoY0&list=PLT17yJT4qQEIR8Y7XkKQxFUr_fHjLbr-Y&index=2
 
 Project 3:
 https://youtu.be/yhijNSxdKxA
